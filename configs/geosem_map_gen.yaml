@@ -1,0 +1,35 @@
+# YAML configuration file for generation of GeoSem Maps.
+
+# LSEG Parameters
+# ckpt_path: Path to the checkpoint of the LSEG model.
+# clip_version: The version of the CLIP model used for training the LSEG model.
+# crop_size: The size of the crop used for training the LSEG model.
+# base_size: The size of the base image used for training the LSEG model.
+LSEG:
+  ckpt_path: "checkpoints/LSeg/lseg_checkpoint.ckpt"
+  clip_version: "ViT-B/32"
+  crop_size: 480
+  base_size: 640
+
+# GeoSem Map Parameters
+# save_root: The root directory to save the generated GeoSem Map.
+# grid_size: The size of the grid for GeoSem Map.
+# room_type: The type of room in Structured3D dataset.
+# fov: The field of view for perspective projection.
+# overlap: The overlap between perspective images.
+# mode: The mode for panorama to perspective projection.
+# out_hw: The output height and width of the perspective images.
+GeoSemMap:
+  save_root: null
+  grid_size: 224
+  room_type: "full"
+  fov: 90
+  overlap: 0.0
+  mode: "bilinear"
+  out_hw: [480, 640]
+
+# Data Parameters
+data_root: "/scratch/hshah/ForeSightDataset/Structured3D"
+num_scenes: null
+start_scene: null
+shard: null

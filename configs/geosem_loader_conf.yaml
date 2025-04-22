@@ -1,0 +1,9 @@
+# Configuration file for testing the GeoSem Dataloader
+
+num_train_scenes: 10
+num_val_scenes: 2
+skip_transform: False
+remove_floor: False
+clip_loss_type: "category_cosine_sim"
+category_freq_path: "/scratch/hshah/ForeSightDataset/training_utils/category_frequency.npy"
+text_feat_path: "/scratch/hshah/ForeSightDataset/training_utils/mp3d_text_feats.npy"

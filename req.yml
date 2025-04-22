@@ -1,0 +1,37 @@
+name: foresight
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8
+  - pip:
+      - networkx
+      - open3d
+      - opencv-python
+      - timm==0.3.2
+      - torcheval
+      - torchmetrics
+      - numpy
+      - openai-clip
+      - matplotlib==3.9.0
+      - omegaconf
+      - pandas
+      - plotly
+      - plyfile
+      - pillow
+      - pyquaternion
+      - pytorch-lightning
+      - scikit-image
+      - scikit-learn
+      - scipy
+      - seaborn
+      - shapely
+      - tensorboard
+      - tqdm
+      - wandb

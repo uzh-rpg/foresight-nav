@@ -1,0 +1,64 @@
+# Configuration File for Evaluation of Exploration Methods on Structured-3D
+
+data_dir: /scratch/hshah/ForeSightDataset/Structured3D
+num_scenes: -1
+
+exp_name: BaselineMethods+Unet-CosSimLoss
+resume: true  # resume from last scene evaluated
+
+# logging
+log:
+  do: true
+  log_dir: objectnav_eval/logs
+  run_id: null
+results_dir: objectnav_eval/results
+
+# random seed for start position generation
+seed: 42
+
+# Goal Setter Configuration
+goal_setter:
+  goal_type: heatmap
+  heatmap_threshold: 0.95
+  random_state: 42
+  random_seed: 42
+
+# Evaluation Methods and Configurations
+methods: 
+
+  random:
+    seed: 42
+
+  greedy: null
+
+  semantic: null
+
+  frontier_clip: null
+
+  imagine:
+    device: cuda
+    model_type: unet
+    model_ckpt: checkpoints/objectnav/unet_cosine_sim.pth
+
+    model_conf:
+      in_channels: 513
+      out_channels: 514
+      conv_depths: [64, 128, 256, 512, 1024]
+
+    occ_thresh: 0.72
+    int_thresh: 0.5
+
+    use_int_mask: true
+    use_pred_occ: false
+
+robot_conf:
+  field_of_view: 80
+  sensor_range: 5
+  max_steps: 500
+  turn_angle: 30
+  
+  debug: false
+  log: false
+  debug_freq: null
+
+  replan_freq: 10

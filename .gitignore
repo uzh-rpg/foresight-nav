@@ -1,0 +1,7 @@
+**/__pycache__/*
+**/*.out
+vis/*
+langq_geosem/*
+checkpoints/*
+tmp/*
+objectnav_eval/*
