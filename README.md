@@ -20,7 +20,7 @@
   <h3 align="center">
 
  <!-- [![ProjectPage](https://img.shields.io/badge/Project_Page)](-) -->
- [![arXiv](https://img.shields.io/badge/arXiv-blue?logo=arxiv&color=%23B31B1B)](https://rpg.ifi.uzh.ch/docs/CVPRW25_Shah.pdf)
+ [![arXiv](https://img.shields.io/badge/arXiv-blue?logo=arxiv&color=%23B31B1B)](https://arxiv.org/abs/2504.16062)
  [![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue)](https://opensource.org/license/gpl-3-0)
  <div align="center"></div>
 </p>
